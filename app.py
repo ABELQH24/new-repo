@@ -10,8 +10,7 @@ def base():
 
 @app.route("/Home", methods=["GET"])
 def home():
-    return render_template("home.html")
-
+    return render_template("home.html"
 #Ejecutar la Aplicación
 if __name__ == '__main__':
     app.run(debug=True)
