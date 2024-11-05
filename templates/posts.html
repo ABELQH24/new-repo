@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %} Mi BLOG {% endblock title %}
+
+{% block content %}
+<h1>Bienvenidos a mis Posts</h1>
+<p>Alguno sposts a continuación</p>
+<table class = "table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>Contenido</th>
+            <th>Fecha de creación</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <th>{{post["id"]}}</th>
+            <th>{{post["title"]}}</th>
+            <th>{{post["content"]}}</th>
+            <th>{{post["created"]}}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

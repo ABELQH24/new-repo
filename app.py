@@ -38,7 +38,7 @@ def get_all_posts():
         print("======>", post["created"])
         print("============================================")
 
-    return render_template(template_name_or_list="posts.html")
+    return render_template(template_name_or_list="posts.html", posts = posts)
 
 #Ejecutar la Aplicación
 if __name__ == '__main__':
