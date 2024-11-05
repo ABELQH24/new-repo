@@ -6,13 +6,19 @@ app = Flask(__name__)
 #Crear la Ruta Principal
 @app.route("/", methods=["GET"])
 def base():
-    context = {"name":"BASE"}
-    return render_template(template_name_or_list="base.html", context=context)
+    context = {
+        "name":"BASE",
+        "project":"web developer Flask"
+        }
+    return render_template(template_name_or_list="base.html", **context)
 
-@app.route("/Home", methods=["GET"])
+@app.route("/home", methods=["GET"])
 def home():
-    return render_template("home.html")
-
+    context = {
+        "name_home":"Home",
+        "my_name": "Jorge"
+        }
+    return render_template(template_name_or_list="home.html", **context)
 #Ejecutar la Aplicación
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 

@@ -9,7 +9,10 @@
 <body>
     {% include "navbar.html" %}
     {% block content %}
+    <h1>{{ name }}</h1>
+    <h1>{{ project }}</h1>
     {% endblock content %}
-    
+
+    <link href="./output.css" rel="stylesheet">
 </body>
 </html>
