@@ -17,7 +17,7 @@
     <tbody>
         {% for post in posts %}
         <tr>
-            <th>{{post["id"]}}</th>
+            <th><a href = "{{url_for('get_one_posts', post_id = post['id'])}}">{{post["id"]}}</a></th>
             <th>{{post["title"]}}</th>
             <th>{{post["content"]}}</th>
             <th>{{post["created"]}}</th>
@@ -25,4 +25,5 @@
         {% endfor %}
     </tbody>
 </table>
+<a href="{{url_for('create_one_posts')}}" class = "btn btn-info" role="button">Create one post</a>
 {% endblock %}
